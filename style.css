@@ -62,7 +62,7 @@ body {
 }
 
 /* Timeline section styles with scroll snap for smooth navigation */
-section {
+.timeline-section {
   display: flex;                /* Arrange cards in a row */
   overflow-x: auto;             /* Allow horizontal scrolling */
   gap: 2rem;                    /* Space between each card */
@@ -70,7 +70,7 @@ section {
   scroll-padding: 2rem;         /* Padding for scroll snap */
   flex-direction: row;          /* Row direction */
   flex-wrap: nowrap;            /* Prevent wrapping */
-  max-width: 1425px;            /* Show 5 cards at a time */
+  max-width: 1350px;            /* Show 4 cards at a time */
   margin: 0 auto;               /* Center the section */
   scroll-behavior: smooth;      /* Smooth scrolling */
   scroll-snap-type: x mandatory;/* Enable horizontal scroll snap */
@@ -78,7 +78,7 @@ section {
 }
 
 /* Each card will snap to the start of the scroll area */
-section > div {
+.timeline-section > div {
   min-width: 300px;
   max-width: 300px;
   flex: 0 0 300px;
@@ -88,11 +88,14 @@ section > div {
   border-radius: 8px;
   padding: 1rem;
   color: #222222;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1), /* Slower and smoother */
+              box-shadow 0.3s cubic-bezier(0.4, 0.2, 0.2, 1),
+              border-color 0.3s,
+              background-color 0.3s;
 }
 
 /* Make images inside cards consistent size */
-section > div img {
+.timeline-section > div img {
   width: 250px;
   height: 100px;
   object-fit: cover;
@@ -101,35 +104,30 @@ section > div img {
 }
 
 /* Hide the paragraph inside each timeline card by default */
-section > div p {
+.timeline-section > div p {
   display: none; /* Hide the text by default */
 }
 
 /* Show the paragraph and hide the image when the card is hovered */
-section > div:hover p {
+.timeline-section > div:hover p {
   display: block; /* Show the text */
   margin: 0;
 }
 
-section > div:hover img {
+.timeline-section > div:hover img {
   display: none; /* Hide the image when hovered */
 }
 
 /* Make the card grow, lift up, add a shadow, and change border color on hover */
-section > div:hover {
+.timeline-section > div:hover {
   transform: scale(1.07) translateY(-8px); /* Slightly bigger and lifted up */
   box-shadow: 0 8px 24px rgba(0, 170, 255, 0.20), 0 2px 8px rgba(0,0,0,0.12); /* Stronger shadow */
   border-color: #0077cc; /* Change border color for more focus */
   background-color: #f0faff; /* Light blue background on hover */
-  transition: 
-    transform 0.3s cubic-bezier(0.4, 0.2, 0.2, 1), 
-    box-shadow 0.3s cubic-bezier(0.4, 0.2, 0.2, 1),
-    border-color 0.3s,
-    background-color 0.3s;
 }
 
 /* Optional: Add a simple fade-in for the text when showing */
-section > div:hover p {
+.timeline-section > div:hover p {
   animation: fadeIn 0.3s;
 }
 
@@ -141,8 +139,75 @@ section > div:hover p {
 
 /* This makes the timeline cards stack vertically on small screens */
 @media (max-width: 768px) {
-  section {
+  .timeline-section {
     flex-direction: column; /* Stack cards on top of each other */
     overflow-x: hidden;     /* Hide horizontal scroll on small screens */
   }
 }
+
+/* Style for timeline arrow buttons */
+.timeline-arrow {
+  background-color: #0077cc; /* Blue background */
+  color: #fff;               /* White arrow */
+  border: none;              /* No border */
+  border-radius: 50%;        /* Circular button */
+  width: 70px;               /* Button size */
+  height: 70px;
+  font-size: 1.5rem;         /* Bigger arrow */
+  cursor: pointer;           /* Pointer cursor on hover */
+  transition: background 0.2s;
+}
+.timeline-arrow:hover {
+  background-color: #005fa3; /* Darker blue on hover */
+}
+
+/* Add this class to control the spacing around the arrows and timeline */
+.timeline-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;           /* Add a small gap between arrows and timeline */
+  margin-top: 2rem;
+  padding-left: 2rem;  /* Add space on the left */
+  padding-right: 2rem; /* Add space on the right */
+}
+
+/* Center the arrow buttons below the timeline */
+.timeline-arrows-below {
+  display: flex;              /* Arrange arrows in a row */
+  justify-content: center;    /* Center the arrows horizontally */
+  gap: 1rem;                  /* Space between the arrows */
+  margin-top: 1rem;           /* Space above the arrows */
+}
+
+/* Hide the horizontal scrollbar by default */
+.timeline-section {
+  scrollbar-width: none;      /* For Firefox */
+  -ms-overflow-style: none;   /* For Internet Explorer and Edge */
+}
+
+/* Actually hide the scrollbar for Webkit browsers (like Chrome and Safari) */
+.timeline-section::-webkit-scrollbar {
+  display: none;              /* Hide scrollbar */
+}
+
+/* Custom footer styles for blue background and white text */
+.custom-footer {
+  background-color: #0077cc; /* Blue background */
+  color: #fff;               /* White text */
+  text-align: center;        /* Center the text */
+  padding: 1rem 0;           /* Space above and below */
+  margin-top: 2rem;          /* Space above the footer */
+}
+
+/* Make footer links white and underline on hover for clarity */
+.custom-footer a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: underline;
+}
+
+.custom-footer a:hover {
+  text-decoration: none;
+}
+

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.rtl.min.css" integrity="sha384-MdqCcafa5BLgxBDJ3d/4D292geNL64JyRtSGjEszRUQX9rhL1QkcnId+OT7Yw+D+" crossorigin="anonymous">
   <title>Intel: Sustainability Through the Ages</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -28,120 +29,248 @@
     </div>
   </header>
 
-  <!-- Timeline Cards Section -->
+  <!-- Timeline Section -->
+  <div>
+    <!-- Timeline Cards Section -->
+    <section class="timeline-section" id="timeline">
+
+      <!-- Card 1: 1968 -->
+      <div>
+        <h2>1968</h2>
+        <h3>Intel Founded</h3>
+        <img src="img/1.jpg" alt="Vintage illustration of Intel’s 1968 origins with scientists, early computing equipment, and references to semiconductor tech." />
+        <p>
+          Robert Noyce and Gordon Moore rename the newly formed company 
+          NM Electronics to Intel Corporation, laying the foundation for 
+          decades of technological innovation.
+        </p>
+      </div>
+
+      <!-- Card 2: 1971 -->
+      <div>
+        <h2>1971</h2>
+        <h3>First Microprocessor</h3>
+        <img src="img/2.jpg" alt="Stylized close-up of the Intel 4004 microprocessor, the world’s first commercial CPU, on a circuit board." />
+        <p>
+          Intel debuts the 4004, the world's first commercial microprocessor, 
+          igniting the microprocessor revolution and propelling the future 
+          of computing devices.
+        </p>
+      </div>
+
+      <!-- Card 3: 1978 -->
+      <div>
+        <h2>1978</h2>
+        <h3>8086 Processor</h3>
+        <img src="img/3.jpg" alt="Close-up of Intel’s 8086 microprocessor, released in 1978, featuring labeled pins and a black ceramic chip package." />
+        <p>
+          Launch of the 8086 processor, establishing the x86 architecture 
+          that drives countless PCs and servers in the modern era.
+        </p>
+      </div>
+
+      <!-- Card 4: 1985 -->
+      <div>
+        <h2>1985</h2>
+        <h3>386 Processor</h3>
+        <img src="img/4.jpg" alt="Close-up of a stylized Intel microprocessor labeled 1985, with exposed copper traces and detailed circuit board design." />
+        <p>
+          Intel introduces the 386 processor with 32-bit architecture, 
+          ushering in a new era of performance and multitasking for 
+          personal computers.
+        </p>
+      </div>
+
+      <!-- Card 5: 2006 -->
+      <div>
+        <h2>2006</h2>
+        <h3>Peak GHG Emissions</h3>
+        <!-- Use the real image for 2006 milestone, set to 250x100 for consistency -->
+        <img src="img/5.png" alt="White downward arrow over a declining bar chart on a green background, symbolizing decrease or downward trend." width="250" height="100" />
+        <p>
+          This year marks Intel's highest annual greenhouse gas emissions 
+          for operations. Over subsequent years, Intel invests heavily in 
+          chemical abatement, renewable energy, and energy-efficient 
+          manufacturing to reverse this trend.
+        </p>
+      </div>
+
+      <!-- Card 6: 2020 -->
+      <div>
+        <h2>2020</h2>
+        <h3>RISE Strategy</h3>
+        <!-- Use the real image for 2020 milestone, set to 250x100 for consistency -->
+        <img src="img/6.png" alt="Group of professionals stacking hands in a gesture of teamwork and unity, wearing business attire in an outdoor setting." width="250" height="100" />
+        <p>
+          Intel launches its RISE (Responsible, Inclusive, Sustainable, 
+          Enabling) strategy and 2030 goals, aiming to drive industry-wide 
+          progress on climate action, water stewardship, and waste reduction.
+        </p>
+      </div>
+
+      <!-- Card 7: 2022 -->
+      <div>
+        <h2>2022</h2>
+        <h3>Net-Zero By 2040</h3>
+        <img src="img/7.png" alt="White electric car parked on a road near a green park with walking paths and industrial buildings in the background." />
+        <p>
+          Intel announces its commitment to achieve net-zero greenhouse 
+          gas emissions (Scope 1 and 2) across its global operations 
+          by 2040, building on years of environmental initiatives.
+        </p>
+      </div>
+
+      <!-- Card 8: 2023 -->
+      <div>
+        <h2>2023</h2>
+        <h3>Renewable Electricity</h3>
+        <img src="img/8.png" alt="Collage of renewable energy sources: a wind turbine, solar panels, and a hydroelectric dam with flowing water." />
+        <p>
+          The company achieves 99% renewable electricity usage worldwide, 
+          helping to drastically lower carbon emissions and driving progress 
+          toward Intel's long-term sustainability goals.
+        </p>
+      </div>
+
+      <!-- Card 9: 2024 -->
+      <div>
+        <h2>2024</h2>
+        <h3>Sustainability Summit</h3>
+        <img src="img/9.png" alt="Audience member raises hand during a sustainability presentation, with a speaker standing in front of a recycling symbol." />
+        <p>
+          Intel hosts its first Sustainability Summit, uniting suppliers, 
+          government officials, and industry leaders to collaborate on 
+          next-generation sustainable semiconductor manufacturing.
+        </p>
+      </div>
+    </section>
+    <!-- Arrow buttons below the timeline, using Bootstrap grid for layout -->
+    <div class="container timeline-arrows-row">
+      <div class="row">
+        <!-- Left arrow in column 1, centered -->
+        <div class="col-lg-4 d-none d-lg-flex justify-content-center">
+          <button id="timeline-left" class="timeline-arrow" aria-label="Scroll left">&larr;</button>
+        </div>
+        <!-- Empty column for spacing on large screens -->
+        <div class="col-lg-4 d-none d-lg-block"></div>
+        <!-- Right arrow in column 3, centered -->
+        <div class="col-lg-4 d-none d-lg-flex justify-content-center">
+          <button id="timeline-right" class="timeline-arrow" aria-label="Scroll right">&rarr;</button>
+        </div>
+        <!-- Both arrows centered together on medium screens -->
+        <div class="col-12 d-none d-md-flex d-lg-none justify-content-center gap-3 mt-3">
+          <button id="timeline-left-md" class="timeline-arrow" aria-label="Scroll left">&larr;</button>
+          <button id="timeline-right-md" class="timeline-arrow" aria-label="Scroll right">&rarr;</button>
+        </div>
+      </div>
+    </div>
+    <!-- Move and center the instruction text directly under the arrows section -->
+    <p style="text-align: center; margin-top: 1rem;">
+      Scroll to view timeline | Hover over cards to learn more!
+    </p>
+  </div>
+
+  <!-- Three-column section using Bootstrap grid -->
   <section>
-
-    <!-- Card 1: 1968 -->
-    <div>
-      <h2>1968</h2>
-      <h3>Intel Founded</h3>
-      <img src="img/1.jpg" alt="Placeholder Image" />
-      <p>
-        Robert Noyce and Gordon Moore rename the newly formed company 
-        NM Electronics to Intel Corporation, laying the foundation for 
-        decades of technological innovation.
-      </p>
-    </div>
-
-    <!-- Card 2: 1971 -->
-    <div>
-      <h2>1971</h2>
-      <h3>First Microprocessor</h3>
-      <img src="img/2.jpg" alt="Placeholder Image" />
-      <p>
-        Intel debuts the 4004, the world's first commercial microprocessor, 
-        igniting the microprocessor revolution and propelling the future 
-        of computing devices.
-      </p>
-    </div>
-
-    <!-- Card 3: 1978 -->
-    <div>
-      <h2>1978</h2>
-      <h3>8086 Processor</h3>
-      <img src="img/3.jpg" alt="Placeholder Image" />
-      <p>
-        Launch of the 8086 processor, establishing the x86 architecture 
-        that drives countless PCs and servers in the modern era.
-      </p>
-    </div>
-
-    <!-- Card 4: 1985 -->
-    <div>
-      <h2>1985</h2>
-      <h3>386 Processor</h3>
-      <img src="img/4.jpg" alt="Placeholder Image" />
-      <p>
-        Intel introduces the 386 processor with 32-bit architecture, 
-        ushering in a new era of performance and multitasking for 
-        personal computers.
-      </p>
-    </div>
-
-    <!-- Card 5: 2006 -->
-    <div>
-      <h2>2006</h2>
-      <h3>Peak GHG Emissions</h3>
-      <!-- Use the real image for 2006 milestone, set to 250x100 for consistency -->
-      <img src="img/5.png" alt="Intel 2006 Milestone" width="250" height="100" />
-      <p>
-        This year marks Intel's highest annual greenhouse gas emissions 
-        for operations. Over subsequent years, Intel invests heavily in 
-        chemical abatement, renewable energy, and energy-efficient 
-        manufacturing to reverse this trend.
-      </p>
-    </div>
-
-    <!-- Card 6: 2020 -->
-    <div>
-      <h2>2020</h2>
-      <h3>RISE Strategy</h3>
-      <!-- Use the real image for 2020 milestone, set to 250x100 for consistency -->
-      <img src="img/6.png" alt="Intel 2020 Milestone" width="250" height="100" />
-      <p>
-        Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-        Enabling) strategy and 2030 goals, aiming to drive industry-wide 
-        progress on climate action, water stewardship, and waste reduction.
-      </p>
-    </div>
-
-    <!-- Card 7: 2022 -->
-    <div>
-      <h2>2022</h2>
-      <h3>Net-Zero By 2040</h3>
-      <img src="img/7.png" alt="Placeholder Image" />
-      <p>
-        Intel announces its commitment to achieve net-zero greenhouse 
-        gas emissions (Scope 1 and 2) across its global operations 
-        by 2040, building on years of environmental initiatives.
-      </p>
-    </div>
-
-    <!-- Card 8: 2023 -->
-    <div>
-      <h2>2023</h2>
-      <h3>Renewable Electricity</h3>
-      <img src="img/8.png" alt="Placeholder Image" />
-      <p>
-        The company achieves 99% renewable electricity usage worldwide, 
-        helping to drastically lower carbon emissions and driving progress 
-        toward Intel's long-term sustainability goals.
-      </p>
-    </div>
-
-    <!-- Card 9: 2024 -->
-    <div>
-      <h2>2024</h2>
-      <h3>Sustainability Summit</h3>
-      <img src="img/9.png" alt="Placeholder Image" />
-      <p>
-        Intel hosts its first Sustainability Summit, uniting suppliers, 
-        government officials, and industry leaders to collaborate on 
-        next-generation sustainable semiconductor manufacturing.
-      </p>
+    <!-- Bootstrap container centers the content and adds padding -->
+    <div class="container">
+      <!-- Bootstrap row creates a horizontal group of columns -->
+      <div class="row">
+        <!-- First column: RISE Strategy -->
+        <div class="col-md-4 mb-4">
+          <h2>RISE Strategy</h2>
+          <p>
+            Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
+            Intel sets ambitious 2030 goals, including driving industry-wide 
+            progress on climate action, water stewardship, and waste reduction.
+          </p>
+          <!-- Learn More Button styled with Bootstrap -->
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+        <!-- Second column: Commitment -->
+        <div class="col-md-4 mb-4">
+          <h2>Commitment</h2>
+          <p>
+            In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
+            (Scope 1 and 2) by 2040. This commitment builds on decades of 
+            environmental initiatives and partnerships across the semiconductor 
+            industry.
+          </p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+        <!-- Third column: Water & Waste -->
+        <div class="col-md-4 mb-4">
+          <h2>Water &amp; Waste</h2>
+          <p>
+            Intel conserves billions of gallons of water annually and 
+            collaborates with local communities to restore watersheds.
+            Intel also upcycles and recycles materials to reduce waste and 
+            advance a circular economy.
+          </p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
     </div>
   </section>
-  <p>Scroll to view timeline | Hover over cards to learn more!</p>
-  
+
+  <!-- Email Subscription Form Section -->
+  <section class="mt-5">
+    <div class="container">
+      <!-- Center the heading and form -->
+      <h2 class="text-center mb-3">Subscribe to Intel's sustainability newsletter today</h2>
+      <form class="row justify-content-center">
+        <!-- Email input field -->
+        <div class="col-md-6 mb-2">
+          <input 
+            type="email" 
+            class="form-control" 
+            placeholder="Enter your email" 
+            required
+          >
+        </div>
+        <!-- Subscribe button -->
+        <div class="col-md-2 mb-2">
+          <button type="submit" class="btn btn-primary w-100">
+            Subscribe
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="custom-footer">
+    <!-- Copyright notice -->
+    <p>
+      &copy; 2025 Intel Corporation. All rights reserved.
+    </p>
+    <!-- Placeholder navigation links -->
+    <nav>
+      <!-- These are just example links for students to practice with -->
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Contact</a>
+    </nav>
+  </footer>
+
+  <!-- Add JavaScript at the end of the body -->
+  <script>
+    // Select the timeline section and arrow buttons
+    const timeline = document.getElementById('timeline');
+    const leftBtn = document.getElementById('timeline-left');
+    const rightBtn = document.getElementById('timeline-right');
+    // Number of pixels to scroll each time (adjust as needed)
+    const scrollAmount = 320; // 300px card + 20px gap
+
+    // Scroll left when left arrow is clicked
+    leftBtn.addEventListener('click', function() {
+      timeline.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    // Scroll right when right arrow is clicked
+    rightBtn.addEventListener('click', function() {
+      timeline.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
